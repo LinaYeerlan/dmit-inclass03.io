@@ -1,0 +1,94 @@
+body {
+    overflow-x: hidden;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 34px;
+    margin: 10px 0;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+nav > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header {
+    background-color: black;
+    
+}
+
+.submenu {
+    visibility: hidden;
+    background-color: grey;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: -10%;
+    transition: all 0.5s ease;
+    z-index: 10;
+}
+
+.submenu a {
+    padding: 0;
+}
+
+nav div:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    right: 0;
+}
+
+svg {
+    height: 30px;
+    fill: white;
+    margin-right: 14px;
+}
+
+nav a:hover{
+    color: lightgreen;
+}
+
+nav a:hover svg {
+    fill: lightgreen;
+}
+
+div:hover svg {
+    fill: lightgreen;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    nav > ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav div:hover > ul {
+        right: auto; 
+        top: 100%;
+        padding: 0 20px;  
+    }
+
+    nav ul ul li {
+        white-space: nowrap;
+    }
+    
+    nav ul ul a {
+        justify-content: flex-start;
+    }
+}
